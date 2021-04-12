@@ -24,8 +24,8 @@ class Book(models.Model):
 
     title = models.CharField(max_length=250)
     author = models.CharField(max_length=250)
-    photo_book = models.ImageField(upload_to='photos', null=True, blank=True)
-    photo_author = models.ImageField(upload_to='photos', null=True, blank=True)
+    photo_book = models.ImageField(upload_to='photos/books/%y/%m/%d', null=True, blank=True)
+    photo_author = models.ImageField(upload_to='photos/authors/%y/%m/%d', null=True, blank=True)
     pages = models.IntegerField(null=True, blank=True)
     price = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     rental_price_day = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)

@@ -3,6 +3,11 @@
 *~
 __pycache__
 
+# media 
+.media
+media/
+photos/
+
 # Env
 .env
 venv/
